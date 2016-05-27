@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<m:menu xmlns:m="http://training.by/XML_XDS_DOM_Parser"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://training.by/XML_XDS_DOM_Parser menu.xsd">
+    <kind id="coldSnacks">
+        <kind-name>Холодные закуски</kind-name>
+        <kind-content>
+            <dish id="madeDish">
+                <dish-photo>madeDish.jpg</dish-photo>
+                <dish-name>Ассорти рыбное</dish-name>
+                <dish-description>Слабосоленая форель, семга</dish-description>
+                <dish-portion>100/20/15</dish-portion>
+                <dish-price>800</dish-price>
+            </dish>
+            <dish id="basturma">
+                <dish-photo>basturma.jpg</dish-photo>
+                <dish-name>Бастурма</dish-name>
+                <dish-description>Вяленая вырезка из говяжьего мяса</dish-description>
+                <dish-portion>50/5</dish-portion>
+                <dish-price>600</dish-price>
+            </dish>
+            <dish id="seniorTomato">
+                <dish-photo>seniorTomato.jpg</dish-photo>
+                <dish-name>Сеньор Помидор</dish-name>
+                <dish-description>Помидор, фаршированный сырным муссом</dish-description>
+                <dish-portion>150/1</dish-portion>
+                <dish-price>150</dish-price>
+            </dish>
+        </kind-content>
+    </kind>
+    <kind id="hotSnacks">
+        <kind-name>Горячие закуски</kind-name>
+        <kind-content>
+            <dish id="julien">
+                <dish-photo>julien.jpg</dish-photo>
+                <dish-name>Жульен</dish-name>
+                <dish-description>с курицей</dish-description>
+                <dish-portion>120/1</dish-portion>
+                <dish-price>145</dish-price>
+            </dish>
+            <dish id="escargo">
+                <dish-photo>escargo.jpg</dish-photo>
+                <dish-name>Эскарго</dish-name>
+                <dish-description>Виноградные улитки, фаршированные по бургундски</dish-description>
+                <dish-portion>12 шт.</dish-portion>
+                <dish-price>230</dish-price>
+            </dish>
+        </kind-content>
+    </kind>
+</m:menu>

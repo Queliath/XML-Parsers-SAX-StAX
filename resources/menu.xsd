@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://training.by/XML_XDS_DOM_Parser"
+        xmlns:tns="http://training.by/XML_XDS_DOM_Parser">
+
+    <!-- Root element -->
+    <element name="menu">
+        <complexType>
+            <sequence>
+                <element name="kind" type="tns:Kind" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <!-- Complex types -->
+    <complexType name="Kind">
+        <sequence>
+            <element name="kind-name" type="string"/>
+            <element name="kind-content" type="tns:KindContent"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+    </complexType>
+
+    <complexType name="KindContent">
+        <sequence>
+            <element name="dish" type="tns:Dish" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Dish">
+        <sequence>
+            <element name="dish-photo" type="tns:fileName"/>
+            <element name="dish-name" type="tns:dishName"/>
+            <element name="dish-description" type="string"/>
+            <element name="dish-portion" type="string"/>
+            <element name="dish-price" type="positiveInteger"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+    </complexType>
+
+    <!-- Simple types -->
+    <simpleType name="fileName">
+        <restriction base="string">
+            <pattern value="[^,.:;']+\.(jpg|png)"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="dishName">
+        <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="50"/>
+        </restriction>
+    </simpleType>
+
+</schema>
